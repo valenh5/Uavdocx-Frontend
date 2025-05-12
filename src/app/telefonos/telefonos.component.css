@@ -1,0 +1,62 @@
+#tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tabla th {
+    background-color: #f2f2f2;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabla td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabla .opciones {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#tabla tr:hover {
+    background-color: #f9f9f9;
+}
+
+div {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="checkbox"] {
+    margin: 5px 0;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+h2 {
+    color: #333;
+}
+
+#editar{
+    background-color: lightgreen;
+}
+
+#borrar{
+    background-color: lightcoral;
+}
+
+#agregar{
+    background-color: aquamarine;
+}
