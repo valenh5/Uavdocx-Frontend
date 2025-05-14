@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 export class RegistroComponent {
   nombre_usuario = '';
   contrasenia = '';
+  usuario_ingreso: string = '';
+  pass_ingreso: string = '';
 
   constructor(private usuarioService: UsuarioService) {}
 
@@ -18,8 +20,17 @@ export class RegistroComponent {
     try {
       const respuesta = await this.usuarioService.registrarUsuario(this.nombre_usuario, this.contrasenia);
       alert(respuesta.mensaje);
-    } catch (error) {
-      alert('Error al registrar usuario');
+    } catch (error: any) {
+      alert(error.response?.data?.mensaje || 'Error al registrar usuario');
+    }
+  }
+
+  async ingresar() {
+    try {
+      const respuesta = await this.usuarioService.comprobarUsuario(this.usuario_ingreso, this.pass_ingreso);
+      alert(respuesta.mensaje);
+    } catch (error: any) {
+      alert(error.response?.data?.mensaje || 'Error al ingresar usuario');
     }
   }
 }
