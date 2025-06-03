@@ -11,10 +11,9 @@ import { FormsModule } from '@angular/forms';
 export class RegistroComponent {
   nombre_usuario = '';
   contrasenia = '';
-<<<<<<< HEAD
-=======
+
   email = '';
->>>>>>> abmPrenda
+
   usuario_ingreso: string = '';
   pass_ingreso: string = '';
 
@@ -22,11 +21,10 @@ export class RegistroComponent {
 
   async registrar() {
     try {
-<<<<<<< HEAD
-      const respuesta = await this.usuarioService.registrarUsuario(this.nombre_usuario, this.contrasenia);
-=======
+
+
       const respuesta = await this.usuarioService.registrarUsuario(this.nombre_usuario, this.email, this.contrasenia);
->>>>>>> abmPrenda
+
       alert(respuesta.mensaje);
     } catch (error: any) {
       alert(error.response?.data?.mensaje || 'Error al registrar usuario');
